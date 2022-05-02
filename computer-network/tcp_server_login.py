@@ -2,7 +2,10 @@
 
 from socket import *
 
-user_list = {"Bob":"1234"}
+user_list = {"Bob":"bob12!",
+             "Alice":"alice34@",
+             "Hamong":"ham92!",
+             "Nodes":"node63!@"}
 
 serverPort = 8080
 serverSocket = socket(AF_INET, SOCK_STREAM)

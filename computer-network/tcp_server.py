@@ -10,7 +10,7 @@ serverSocket.listen(1)      # 1명만 상대한다는 의미
 connectionSocket, addr = serverSocket.accept()  # 클라이언트가 전송한 내용을 받음
 print('Connected by', addr)
 case = connectionSocket.recv(4).decode()
-connectionSocket.send("(Server)start writing words")
+#connectionSocket.send("(Server)start writing words\n".encode())
 
 if case == "1": #Lower to Upper
     while True:
