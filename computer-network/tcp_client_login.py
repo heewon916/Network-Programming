@@ -8,19 +8,18 @@ clientSocket = socket(AF_INET, SOCK_STREAM)     # SOCK_STREAM: TCP 프로토콜�
 clientSocket.connect((host, serverPort))
 
 print("Program for Login...")
-print("Usage: to quit >> write 'exit'")
-print("***Start Login***\n")
+print("Usage: to quit >> write 'exit' on ID")
 while True:
     id = str(input('Input ID: '))
     pw = str(input('Input PW: '))
 
-    clientSocket.send((id+' ' +pw).encode())
-    modifiedSentence = clientSocket.recv(1024)
-    print("From server: ", modifiedSentence.decode())    
-    
-    keep_on_state = str(input("\tKeep on State?(y/n) >>"))
-    if keep_on_state == 'n':
+    if id == 'exit':
         clientSocket.send("exit".encode())
         break
+    clientSocket.send((id+' ' +pw).encode())
+    response = clientSocket.recv(1024)
+    print(response.decode())
+        
+
 print("(Client)Bye\n")
 clientSocket.close()
