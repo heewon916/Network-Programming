@@ -27,7 +27,7 @@ while True:
         connectionSocket.send(sentence.encode())
     # 아이디가 없는 경우: 회원가입을 진행 
     else:
-        print("pw = ", type(pw))
+        #print("pw = ", type(pw))
         if len(pw)<4 or pw.isdecimal():
             sentence = "[!] FORMAT ERROR: length should be longer than 4 and include numbers"
         else:
