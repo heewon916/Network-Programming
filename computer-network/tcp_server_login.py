@@ -32,7 +32,7 @@ while True:
             sentence = "[!] FORMAT ERROR: length should be longer than 4 and include alphabets with numbers\n"
         else:
             user_list[id] = pw 
-            sentence = "(Server)Welcome!"
+            sentence = "(Server)Welcome!\n"
         connectionSocket.send(sentence.encode())    
 connectionSocket.close()
 serverSocket.close()

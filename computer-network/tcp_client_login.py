@@ -7,7 +7,7 @@ serverPort = 8080
 clientSocket = socket(AF_INET, SOCK_STREAM)     # SOCK_STREAM: TCP 프로토콜을 사용한다는 의미
 clientSocket.connect((host, serverPort))
 
-print("Program for Login...")
+print("\nProgram for Login...")
 print("Usage: to quit >> write 'exit' on ID")
 while True:
     id = str(input('Input ID: '))

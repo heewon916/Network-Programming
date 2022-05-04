@@ -35,7 +35,5 @@ else:
             break
         sentence = "case is wrong..."
         connectionSocket.send(sentence.encode())
-        connectionSocket.close()
-        serverSocket.close()
 connectionSocket.close()
 serverSocket.close()
