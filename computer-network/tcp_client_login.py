@@ -14,7 +14,7 @@ while True:
     pw = str(input('Input PW: '))
 
     if id == 'exit':
-        clientSocket.send("exit".encode())
+        clientSocket.send("exit exit".encode())
         break
     clientSocket.send((id+' ' +pw).encode())
     response = clientSocket.recv(1024)

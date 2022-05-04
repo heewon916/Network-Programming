@@ -29,10 +29,10 @@ while True:
     else:
         #print("pw = ", type(pw))
         if len(pw)<4 or pw.isdecimal():
-            sentence = "[!] FORMAT ERROR: length should be longer than 4 and include numbers"
+            sentence = "[!] FORMAT ERROR: length should be longer than 4 and include alphabets with numbers\n"
         else:
             user_list[id] = pw 
-            sentence = "(server)Welcome!"
+            sentence = "(Server)Welcome!"
         connectionSocket.send(sentence.encode())    
 connectionSocket.close()
 serverSocket.close()
